@@ -18,74 +18,82 @@
     </header>
     
     <!-- Seccion donde el usuario ingresa datos ya registrados para iniciar sesion -->
+    <section class="registry">
+      <section>
+
+        <figure>
+          <img src="img-page/fit-blanco.png" alt="logo" id="logo">
+        </figure>
+        <section class="inputs">
+          <input type="text" placeholder="Usuario">
+          <input type="text" placeholder="Contraseña">
+          <button>Iniciar Sesión</button>
     
-    <section class="registro">
-      <figure>
-        <img src="img-page/fit-blanco.png" alt="logo" id="logotipo">
-      </figure>
-      <section class="inputs">
-        <input type="text" placeholder="Usuario">
-        <input type="text" placeholder="Contraseña">
-        <button>Iniciar Sesión</button>
+        </section>
+        <!-- seccion se le piden datos extras -->
+        <section class="forget-password">
+          <label>
+            <input type="checkbox" name="remember" id="remember" checked>
+            Recordarme
+          </label>
+          <a href="#">Olvidaste tu contraseña</a>
+          <a href="#" id="abrir">Registrate</a>
+        </section>
   
-      </section>
-      <!-- seccion se le piden datos extras -->
-      <section class="olvido-constraseña">
-        <label>
-          <input type="checkbox" name="remember" id="recordarme" checked>
-          Recordarme
-        </label>
-        <a href="#">Olvidaste tu contraseña</a>
+        <p>O inicia con</p>
+        <!-- Seccion inicia sesion con otra aplicacion -->
+        <section class="aplications">
+          <a href="#"><img src="img-page/facebook.png" alt="facebook" id="face"></a>
+          <a href="#"><img src="img-page/gmail.png" alt="gmail" id="gmail"></a>
+        </section>
       </section>
 
-      <p>O inicia con</p>
-      <!-- Seccion inicia sesion con otra aplicacion -->
-      <section class="aplicaciones">
-        <a href="#"><img src="img-page/facebook.png" alt="facebook" id="face"></a>
-        <a href="#"><img src="img-page/gmail.png" alt="gmail" id="gmail"></a>
-      </section>
-      <!-- <figure>
-        <img src="img-page/fondo-registro.jpg" alt="">
-      </figure> -->
+      <!-- modal -->
+      <div id="open" class="modal">
+
+        <div class="conteiner" id="conteiner">
+    
+            <form id="modal-content" class="modal-content">
+              <a href="#" id="cerrar" class="cerrar">X</a>
+              <h2>Crear una cuenta</h2>
+              <p>Registrate con</p>
+              <figure>
+                <a href="#"><img src="img-page/facebook.png" alt="facebook" width="30"></a>
+                <a href="#"><img src="img-page/gmail.png" alt="gmail" width="30"></a>
+                
+              </figure>
+    
+    
+              <input type="text" placeholder="Nombre" autocomplete="on" required>
+              <input type="text" placeholder="Correo electrónico" name="email" autocomplete="on">
+              <input type="password" placeholder="Contraseña">
+              <label for="year" class="label">Año de nacimiento</label>
+              <input type="number" max="2019" min="1940" placeholder="1940">
+              <p>Sexo:
+                <input type="radio" name="hm" value="h" required> Hombre
+                <input type="radio" name="hm" value="m"> Mujer
+              </p>
+              <p>Al hacer click en Registrarse, acepta los <a href="Términos y condiciones" class="terminos"> Términos y
+                  Condiciones</a> de
+                uso
+                de Fit Club</p>
+              <div>
+                <button class="Registrarse">
+                  Registrarse
+                </button>
+              </div>
+    
+            </form>
+          </div>
+      </div>
+     
+  
     </section>
+
     <section>
   
     </section>
-    <div class="conteiner" id="conteiner">
-
-        <form id="modal-content" class="modal-content">
-          <a href="#" id="cerrar" class="cerrar">X</a>
-          <h2>Crear una cuenta</h2>
-          <p>Registrate con</p>
-          <figure>
-            <img src="../iconos/facebook.png" alt="facebook" width="30">
-            <img src="../iconos/gmail.png" alt="gmail" width="30">
-          </figure>
-
-
-          <input type="text" placeholder="Nombre" autocomplete="on" required>
-          <input type="text" placeholder="Correo electrónico" name="email" autocomplete="on">
-          <input type="password" placeholder="Contraseña">
-          <label for="year" class="label">Año de nacimiento</label>
-          <input type="number" max="2019" min="1940" placeholder="1940">
-          <p>Sexo:
-            <input type="radio" name="hm" value="h" required> Hombre
-            <input type="radio" name="hm" value="m"> Mujer
-          </p>
-          <p>Al hacer click en Registrarse, acepta los <a href="Términos y condiciones" class="terminos"> Términos y
-              Condiciones</a> de
-            uso
-            de Fit Club</p>
-          <div>
-            <button class="Registrarse">
-              Registrarse
-            </button>
-          </div>
-
-        </form>
-      </div>
-
-    </div>
+    
   </main>
 
   <script src=" main.js"></script>
