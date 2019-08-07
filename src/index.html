@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,9 +51,46 @@
     <section>
   
     </section>
+    <div class="conteiner" id="conteiner">
+
+        <form id="modal-content" class="modal-content">
+          <a href="#" id="cerrar" class="cerrar">X</a>
+          <h2>Crear una cuenta</h2>
+          <p>Registrate con</p>
+          <figure>
+            <img src="../iconos/facebook.png" alt="facebook" width="30">
+            <img src="../iconos/gmail.png" alt="gmail" width="30">
+          </figure>
+
+
+          <input type="text" placeholder="Nombre" autocomplete="on" required>
+          <input type="text" placeholder="Correo electrónico" name="email" autocomplete="on">
+          <input type="password" placeholder="Contraseña">
+          <label for="year" class="label">Año de nacimiento</label>
+          <input type="number" max="2019" min="1940" placeholder="1940">
+          <p>Sexo:
+            <input type="radio" name="hm" value="h" required> Hombre
+            <input type="radio" name="hm" value="m"> Mujer
+          </p>
+          <p>Al hacer click en Registrarse, acepta los <a href="Términos y condiciones" class="terminos"> Términos y
+              Condiciones</a> de
+            uso
+            de Fit Club</p>
+          <div>
+            <button class="Registrarse">
+              Registrarse
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
   </main>
 
-
+  <script src=" main.js"></script>
+  <script src="./lib/index.js"></script>
   <script type="module" src="main.js"></script>
 </body>
+
 </html>
