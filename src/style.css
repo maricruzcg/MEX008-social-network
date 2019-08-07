@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Cabin', sans-serif;
+}
+.registro{
+    background-image: url(img-page/fondo-registro.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+#logotipo{
+    width: 35%;
+    margin-top: 15%;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 35%;
+}
+#face{
+    width: 5%;
+}
+#gmail{
+    width: 5%;
+}
