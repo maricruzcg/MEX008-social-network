@@ -5,5 +5,5 @@
 //   console.log('Hola mundo!');
 // };
 
-
+// Your web app's Firebase configuration
 
