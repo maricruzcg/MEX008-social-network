@@ -22,11 +22,7 @@ cerrar.addEventListener("click", () => {
 
 
 
-// window.addEventListener((event) =>{
-//   if( event.target == open) {
-//       open.visibility ="hidden";
-//   }
-// });
+
 var firebaseConfig = {
   apiKey: "AIzaSyBmKXHHXPk-3WQ49qZhy4JZDMtcN_IrCt0",
   authDomain: "fitclubredsocial.firebaseapp.com",
@@ -98,7 +94,7 @@ const googleSignIn = () => {
 const btnGmail = document.getElementById("gmail-register")
 btnGmail.addEventListener("click",  googleSignIn, false)
 
-  // provider.addScope('https://www.googleapis.com/auth/plus.login');
+  
 // if (firebase.auth().currentUser) {
 // firebase.auth().signOut().then(function() {
 //   // Sign-out successful.
