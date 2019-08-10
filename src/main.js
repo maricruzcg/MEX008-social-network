@@ -39,6 +39,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+// autenticar con correo y contraseña 
 
 let emailNodo = document.getElementById("email-register");
 let passwordNodo = document.getElementById("password-register");
@@ -61,34 +62,44 @@ botonRegistrarNodo.addEventListener("click", () => {
 });
 
 // con google
-const ingresoGoogle = () => {
-  if (firebase.auth().currentUser) {
-    var provider = new firebase.auth.GoogleAuthProvider();
-    provider.addScope('https://www.googleapis.com/auth/plus.login');
-    firebase.auth().signInWithRedirect(provider).then(function (result) {
-      var token = result.credential.accesstoken;
-      var user = result.user;
-    }).catch (function (error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      var errorEmail = error.email;
-      var credential = error.credential;
-      if (errorCode === "auth/account-exists-with-different-credential"){
-        alert("el usuario ya existe");
-      }
-    })
+const googleSignIn = () => {
+  if(!firebase.auth().currentUser) {
+ let provider = new firebase.auth.GoogleAuthProvider();
+ provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+ firebase.auth().signInWithPopup(provider).then(function(result) {
+  // This gives you a Google Access Token. You can use it to access the Google API.
+  var token = result.credential.accessToken;
+  // The signed-in user info.
+  var user = result.user;
+  console.log("user")
+  // ...
+}).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
 
-  } else {
-    firebase.auth().signOut();
-  }
+  var errorMessage = error.message;
+  console.log(errorMessage);
+  // The email of the user's account used.
+  var email = error.email;
+  console.log(email);
+  // The firebase.auth.AuthCredential type that was used.
+  var credential = error.credential;
+  console.log(credential);
+  if(errorCode==="auth/account-exists-with-different-credential") {
+    alert("este usuario ya existe")
+  } 
+    
+  
+  // ...
+});
+
+}
 };
+const btnGmail = document.getElementById("gmail-register")
+btnGmail.addEventListener("click",  googleSignIn, false)
 
-
-
-
-
-
-
+  // provider.addScope('https://www.googleapis.com/auth/plus.login');
+// if (firebase.auth().currentUser) {
 // firebase.auth().signOut().then(function() {
 //   // Sign-out successful.
 // }).catch(function(error) {
