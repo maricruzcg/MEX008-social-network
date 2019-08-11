@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Fit Club</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
 
 </head>
 
@@ -16,7 +16,7 @@
 
     <header>
     </header>
-    
+
     <!-- Seccion donde el usuario ingresa datos ya registrados para iniciar sesion -->
     <section class="registry">
       <section>
@@ -25,10 +25,10 @@
           <img src="img-page/fit-blanco.png" alt="logo" id="logo">
         </figure>
         <section class="inputs">
-          <input type="text" placeholder="Usuario">
-          <input type="text" placeholder="Contraseña">
-          <button>Iniciar Sesión</button>
-    
+          <input type="text" placeholder="Usuario" id="usuario">
+          <input type="text" placeholder="Contraseña" id="contraseña">
+          <button id="btn-iniciar">Iniciar Sesión</button>
+
         </section>
         <!-- seccion se le piden datos extras -->
         <section class="forget-password">
@@ -39,7 +39,7 @@
           <a href="#">Olvidaste tu contraseña</a>
           <a href="#" id="abrir">Registrate</a>
         </section>
-  
+
         <p>O inicia con</p>
         <!-- Seccion inicia sesion con otra aplicacion -->
         <section class="aplications">
@@ -51,47 +51,47 @@
       <!-- modal -->
       <div id="open" class="modal">
 
-      <div class="conteiner" id="conteiner">
+        <div class="conteiner" id="conteiner">
 
-        <form id="modal-content" class="modal-content">
-          <a href="#" id="cerrar" class="cerrar">X</a>
-          <h2>Crear una cuenta</h2>
-          <p>Registrate con</p>
-          <section class="aplications">
-            <a href="#"><img src="img-page/facebook.png" alt="facebook" id="face-register" width="50"></a>
-            <a href="#"><img src="img-page/gmail.png" alt="gmail" id="gmail-register" width="50"></a>
-          </section>
+          <form id="modal-content" class="modal-content">
+            <a href="#" id="cerrar" class="cerrar">X</a>
+            <h2>Crear una cuenta</h2>
+            <p>Registrate con</p>
+            <section class="aplications">
+              <a href="#"><img src="img-page/facebook.png" alt="facebook" id="face-register" width="50"></a>
+              <a href="#"><img src="img-page/gmail.png" alt="gmail" id="gmail-register" width="50"></a>
+            </section>
 
-          <!-- <input type="text" placeholder="Nombre" autocomplete="on" required id="name-register"> -->
-          <input type="text" placeholder="Correo electrónico" name="email-register" autocomplete="on"
-            id="email-register">
-          <input type="password" placeholder="Contraseña" id="password-register">
-          <!-- <label for="year" class="label">Año de nacimiento</label>
+            <!-- <input type="text" placeholder="Nombre" autocomplete="on" required id="name-register"> -->
+            <input type="text" placeholder="Correo electrónico" name="email-register" autocomplete="on"
+              id="email-register">
+            <input type="password" placeholder="Contraseña" id="password-register">
+            <!-- <label for="year" class="label">Año de nacimiento</label>
           <input type="number" max="2019" min="1940" placeholder="1940" id="year-register">
       
           <p>Sexo:
             <input type="radio" name="hm" value="h" required id="man-register"> Hombre
             <input type="radio" name="hm" value="m" id="woman-register"> Mujer -->
-          </p> 
-          <p>Al hacer click en Registrarse, acepta los <a href="Términos y condiciones" class="terminos"> Términos y
-              Condiciones</a> de
-            uso
-            de Fit Club</p>
-          <div>
-            <button class="registrarse" id="registrarse">
-              Registrarse
-            </button>
-          </div>
-      </div>
-     
-  
+            </p>
+            <p>Al hacer click en Registrarse, acepta los <a href="Términos y condiciones" class="terminos"> Términos y
+                Condiciones</a> de
+              uso
+              de Fit Club</p>
+            <div>
+              <button class="registrarse" id="registrarse">
+                Registrarse
+              </button>
+            </div>
+        </div>
+
+
     </section>
 
     </div>
-  </div>
+    </div>
 
 
-    
+
   </main>
   <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
