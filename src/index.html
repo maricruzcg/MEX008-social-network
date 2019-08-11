@@ -8,7 +8,7 @@
   <title>Fit Club</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet"> 
-
+ 
 </head>
 
 <body>
@@ -25,9 +25,9 @@
           <img src="img-page/fit-blanco.png" alt="logo" id="logo">
         </figure>
         <section class="inputs">
-          <input type="text" placeholder="Usuario">
-          <input type="text" placeholder="Contraseña">
-          <button>Iniciar Sesión</button>
+          <input id="email-registry" type="email" placeholder="Correo electrónico">
+          <input id="password-registry" type="password" placeholder="Contraseña">
+          <button id="log-in">Iniciar Sesión</button>
     
         </section>
         <!-- seccion se le piden datos extras -->
@@ -93,12 +93,37 @@
     <section>
   
     </section>
+
+    <section id="wall">
+      <p id="welcome"></p>
+
+    </section>
     
   </main>
+  
 
+
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBmKXHHXPk-3WQ49qZhy4JZDMtcN_IrCt0",
+      authDomain: "fitclubredsocial.firebaseapp.com",
+      databaseURL: "https://fitclubredsocial.firebaseio.com",
+      projectId: "fitclubredsocial",
+      storageBucket: "",
+      messagingSenderId: "151023209904",
+      appId: "1:151023209904:web:bae938869cf0dc09"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  
   <script src=" main.js"></script>
   <script src="./lib/index.js"></script>
-  <script type="module" src="main.js"></script>
+  <!-- <script type="module" src="main.js"></script> -->
+
 </body>
 
 </html>
