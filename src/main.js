@@ -85,6 +85,35 @@ btnIniciarSesion.addEventListener("click", () => {
   });
 });
 
+//Observador de usuarios ya registrados
+const observer = () => {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      console.log("existe usuario activo")
+      wall();
+      // User is signed in.
+      var displayName = user.displayName;
+      var email = user.email;
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      var providerData = user.providerData;
+      // ...
+    } else {
+      // User is signed out.
+      console.log("no existe usuario activo")
+      // ...
+    }
+  });  
+}
+observer();
+
+const wall = () => {
+  let welcome = document.getElementById("welcome");
+  welcome.innerHTML = "solo el usuario activo";
+}
+
 // con google
 const googleSignIn = () => {
   if (!firebase.auth().currentUser) {
