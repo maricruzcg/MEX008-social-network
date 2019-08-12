@@ -53,10 +53,9 @@ firebase.initializeApp(firebaseConfig)
 
 
 // evento para correo y contraseña
-botonRegistrarNodo.addEventListener("click", (e) => {
+botonRegistrarNodo.addEventListener("click", () => {
   // aqui se obtienen los valores
-  e.preventDefault();
-  let emailText = document.getElementById("email-register").value;
+  let emailText = document.getElementById("email-register");
   let passText = document.getElementById("password-register").value;
 
   // SINGN up
