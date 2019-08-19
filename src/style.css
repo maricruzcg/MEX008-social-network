@@ -9,29 +9,76 @@ body{
     background-image: url(img-page/fondo-registro.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
+    height: 50%;
     display: flex;
     flex-direction: column;
 }
 #logo{
-    width: 35%;
-    margin-top: 15%;
+    width: 22%;
+    margin-top: 6%;
+    margin-left: 10%;
+    margin-bottom: 2%;
 }
+
+/* Estilo de inputs clases */
 .inputs{
     display: flex;
     flex-direction: column;
     justify-content: left;
-    width: 35%;
+    width: 23%;
+    margin-left: 10%;
+    margin-bottom: 2%;
+}
+
+/* Estilos de inputs individuales */
+#usuario, #contraseña, #tex-post{
+    margin: 3%;
+    background-color:rgba(255, 255, 255, 0.801);
+    color: #000000;
+    border: 0;
+    border-radius: 20px;
+    height: 40px;
+    text-align: center;
+    /* background-image: url(page-img/) */
+
+}
+.btn-generales, #borrar, .editar, #boton-contar{
+    margin: 3%;
+    margin-bottom: 5%;
+    color: #ffffff;
+    border-radius: 20px;
+    height: 40px;
+    font-size: 1em;
+}
+#btn-iniciar{
+    background-color: #1E8DF4;
+    border: 2px solid #1E8DF4;
+}
+#abrir{
+    margin-left: 17%;
+    color: #ffff;
+    font-size: 130%;
+    text-decoration: none;
+    font-weight: bold;
+}
+#inicia1{
+    margin-left: 18%;
+    margin-top: 3%;
+    font-size: 110%;
 }
 #face{
-    width: 5%;
+    margin: 2%;
+    margin-left: 15%; 
+    width: 4%;
 }
 #gmail{
-    width: 5%;
+    margin: 2%; 
+    width: 4%;
 }
 .modal{
 
 position: fixed;
-margin-right: 50%;
+margin-right: 45%;
 top:0;
 bottom: 0;
 left: 0;
@@ -39,7 +86,6 @@ right: 0;
 display: flex;
 align-items: center;
 justify-content: center;
-
 visibility: hidden;
 }
 .active {
@@ -50,9 +96,9 @@ visibility: hidden;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: #ecdada;;
-    width: 70%;
-    height: 80vh;
+    background: rgba(243, 243, 243, 0.938);;
+    width: 78%;
+    height: 98vh;
     align-items: center;
     margin-right: 70%;
     text-align: center;
@@ -67,17 +113,24 @@ visibility: hidden;
 a.cerrar{
 margin-left: 80%;
 margin-bottom: 10%;
-font-size: 25px;
+font-size: 130%;
 font-family: sans-serif;
 font-weight: bold;
 }
 
 .label {
 width: 100%;
-font-size: 15px;
+font-size: 130%;
 text-align: center;
 }
- 
+#inicia2{
+    font-size: 130%;
+    color: #A9ADAF;
+    margin-bottom: 5%;
+}
+.aplications{
+    margin-bottom: 5%;
+}
 .modal-content input {
    margin-top: 10px;
    display: flex;
@@ -91,4 +144,150 @@ text-align: center;
        padding:1rem;
        margin-left: 1rem;
    }
+#crear-cuenta{
+    margin-bottom: 4%;
+}
+.inputs-register{
+    margin: 2%;
+    background-color:rgba(205, 219, 224, 0.884);
+    color: #000000;
+    border: 0;
+    border-radius: 20px;
+    height: 40px;
+    text-align: center;
+}
+#año-etiqueta, #condiciones{
+    font-size: small;
+}
+#registrarse{
+    width: 135%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    color: #ffffff;
+    border-radius: 20px;
+    height: 45px;
+    font-size: 1em;
+    background-color: #F75632;
+    border: 2px solid #F75632;
+}
 
+/*------------------------------ Menu -----------------------------------*/
+header nav{
+    background-color: #32B0F7;
+}
+    header nav ul{
+        list-style: none;
+        overflow: hidden;
+        
+        
+    }
+        header nav ul li{
+            display: inline-block;
+            padding-top: 5%;
+            padding-right: 5%;
+        }
+            header nav ul li a{
+                display: block;
+                padding: 20%;
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                transition: all 0.4s linear;
+                border-radius: 2px;
+                flex-direction: row-reverse;
+            }
+            /* header nav ul li a:hover{
+                background: #F79E32;
+            } */
+            header nav li{
+                float: right;
+            }
+            #logo-wall{
+                display: block;
+                position: absolute;
+                justify-content: space-between;
+                align-items: center;
+                width: 15%;
+            }
+#close-sesion{
+    float: right;
+    background-color: #32B0F7;
+    border: 2px solid #32B0F7;
+    margin-top: 5%;
+    margin-bottom: 0%;
+    font-weight: bold;
+
+}
+
+/* -----------------------------------Muro------------------------------- */
+#image-muro{
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin-left: 50%;
+    position: absolute;
+   
+}
+.create, .tabla{
+    padding: 0;
+    background-color: #E1F4FF;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+#publicar, #editado{
+    background-color: #F79E32;
+    border: 2px solid #F79E32;
+    width: 20%;
+    
+}
+#tex-post{
+    width: 90%;
+    margin-top: 5%;
+}
+#editado{
+    margin-left: 75%;
+    margin-top: -14.5%;
+}
+#publicar{
+    margin-left: 50%;
+}
+#titulo-publicacion{
+    margin: 4%;
+    font-size: 105%;
+    font-weight: lighter;
+}
+.tabla{
+    font-size: 70%;
+    font-weight: lighter;
+    color: #292929;
+}
+#usuario-muro{
+    text-align: left;
+    font-weight: lighter;
+    margin-left: 10%;
+    margin-top: 3%;
+
+}
+#post-muro{
+    font-weight: lighter;
+    margin: 5%;
+    padding: 3%;
+    display: block;
+    text-align: left;
+    border: solid 0.5px #a0a0a0;
+    background-color: #ffffff;
+
+}
+#borrar, .editar, #boton-contar{
+    width: 15%;
+    font-size: small;
+    background-color: rgb(119, 204, 253);
+    border: 2px solid rgb(119, 204, 253);
+    border-radius: 15px;
+    align-content: center;
+    font-weight: bold;
+}
