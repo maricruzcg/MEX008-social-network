@@ -22,8 +22,8 @@ Nuestro usuario le gusta hacer ejercicio asiste a gimnasio o paga membresía de 
 Criterios de aceptación
 
     • Si el mail no es reconocido ver un mensaje de error
-    • el mensaje de error se debe resaltar en letras rojas 
-    • debo ver la pagina en celular y en pantalla
+    • El mensaje de error se debe resaltar en letras rojas 
+    • Debo ver la página en celular y en pantalla
 
 2. Como usuario me gustaría poder seguir a las personas de la red social que me motivan y dar likes a sus historias, para poder hacer un seguimiento de sus publicaciones.
 
@@ -44,6 +44,9 @@ Criterios de aceptación
 4. Como usuario me gustaria poder publicar contenido, dar likes, buscar personas en la red, comentar publicaciones y compartir.
 
 Criterios de aceptación
+    • Que el usuario pueda publicar post 
+    • Que el usuario pueda borrar o modificar post
+    • El Usuario pueda dar likes a publicaciones de otros usuarios
 
 ## Entrevistas
 
@@ -117,3 +120,42 @@ También decidimos utilizar fotografías en la aplicación que ayudarán a motiv
 ## Prototipo de alta fidelidad
 
 [Prototipo Fit Club](https://www.figma.com/proto/UiGQIxWldPdR11fRR9EFxe/FitClub?node-id=1%3A5&scaling=scale-down)
+
+## Programas utilizados
+
+JavaScript(ES6+), HTML y CSS.
+
+## Boiler plate
+
+
+```text
+.
+├── package.json
+├── firebase.json
+├── firebase.indexes.json
+├── firebase.rules
+├── README.md
+├── README Lab.md
+├── src
+│   ├── view
+│   │   ├── chat.js
+│   │   │── error.js
+│   │   │── home.js
+|   |   |──login.js
+|   |   |── navbar.js
+|   |   |── perfil.js
+|   |── services
+|   |   |── utils.js
+|   |──imagenes
+|   |──img-page
+│   │   
+│   ├── app.js
+│   ├── index.html
+│   ├── main.js
+│   └── style.css
+|── iconos
+└── test
+    └── index.spec.js
+
+
+```
