@@ -11,19 +11,19 @@ let Login = {
         <section class="inputs">
           <input type="text" placeholder="Correo electrónico" id="usuario" autocomplete="on">
           <input type="password" placeholder="Contraseña" id="contraseña">
-          <button id="btn-iniciar">Iniciar Sesión</button>
+          <button class="btn-generales" id="btn-iniciar">Iniciar Sesión</button>
 
         </section>
         <!-- seccion se le piden datos extras -->
         <section class="forget-password">
-          <label>
+        <!-- <label>
             <input type="checkbox" name="remember" id="remember" checked>
             Recordarme
-          </label>
+          </label> -->
           <a href="#" id="abrir">Registrate</a>
         </section>
 
-        <p>O inicia con</p>
+        <p id="inicia1">O inicia con</p>
         <!-- Seccion inicia sesion con otra aplicacion -->
         <section class="aplications">
           <a href="#"><img src="img-page/facebook.png" alt="facebook" id="face"></a>
@@ -38,25 +38,24 @@ let Login = {
 
           <form id="modal-content" class="modal-content">
             <a href="#" id="cerrar" class="cerrar">X</a>
-            <h2>Crear una cuenta</h2>
-            <p>Registrate con</p>
+            <h2 id="crear-cuenta">Crear una cuenta</h2>
+            <p id="inicia2">Registrate con</p>
             <section class="aplications">
               <a href="#"><img src="img-page/facebook.png" alt="facebook" id="face-register" width="50"></a>
               <a href="#"><img src="img-page/gmail.png" alt="gmail" id="gmail-register" width="50"></a>
             </section>
 
-            <!-- <input type="text" placeholder="Nombre" autocomplete="on" required id="name-register"> -->
-            <input type="text" placeholder="Correo electrónico" name="email-register" autocomplete="on"
+            <input class="inputs-register" type="text" placeholder="Nombre" autocomplete="on" required id="name-register">
+            <input class="inputs-register" type="text" placeholder="Correo electrónico" name="email-register" autocomplete="on"
               id="email-register">
-            <input type="password" placeholder="Contraseña" id="password-register">
-            <!-- <label for="year" class="label">Año de nacimiento</label>
-          <input type="number" max="2019" min="1940" placeholder="1940" id="year-register">
+            <input class="inputs-register" type="password" placeholder="Contraseña mínimo 6 carácteres" id="password-register">
+            <input class="inputs-register" type="password" placeholder="Confirmar contraseña" id="password-confirm">
+            <label for="year" class="label"id="año-etiqueta">Año de nacimiento</label>
+          <input class="inputs-register" type="number" max="2019" min="1940" placeholder="1940" id="year-register">
       
-          <p>Sexo:
-            <input type="radio" name="hm" value="h" required id="man-register"> Hombre
-            <input type="radio" name="hm" value="m" id="woman-register"> Mujer -->
+    
             </p>
-            <p>Al hacer click en Registrarse, acepta los <a href="Términos y condiciones" class="terminos"> Términos y
+            <p id="condiciones">Al hacer click en Registrarse, acepta los <a href="Términos y condiciones" class="terminos"> Términos y
                 Condiciones</a> de
               uso
               de Fit Club</p>
@@ -93,13 +92,15 @@ let Login = {
           conteiner.classList.remove("active");
       });
 
+      
+
       //Registro
       const btnRegister = document.getElementById("registrarse");
       btnRegister.addEventListener("click", register, false);
 
       //Inicio de sesión
       const btnIniciarSesion = document.getElementById("btn-iniciar");
-      btnIniciarSesion.addEventListener("click", inicioSesion, false);
+      btnIniciarSesion.addEventListener("click", logIn, false);
 
 
   

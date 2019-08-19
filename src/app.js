@@ -10,20 +10,20 @@
 import Navbar from './view/navbar.js'
 import Login from './view/login.js'
 import Home from './view/home.js'
-import Register from './view/registro.js'
+import Chat from './view/chat.js'
 import Error404 from './view/error.js'
-// import Timeline from './view/timeline.js'
+import Perfil from './view/perfil.js'
 import Utils from './services/utils.js'
 
 //Se enlistan las rutas permitidas, si no se encuentran marcara error
 
 const routes = {
-  '/'          :Login 
-  ,'/register' : Register
+  '/'          : Login 
+  ,'/chat'     : Chat
   ,'/home'     : Home
   ,'/navbar'   : Navbar
   ,'/error'    : Error404
-  // ,'/timeline' : Timeline
+  ,'/perfil'   : Perfil
 };
 
 //El codigo del enrutador
@@ -33,6 +33,7 @@ const route = async () => {
   // Se visualizan solo los elementos en turno
   const header = null || document.getElementById("header-container");
   const content = null || document.getElementById("page-container");
+  
 
   //Representa los elementos estático en la página
   header.innerHTML = await Navbar.render();
@@ -45,6 +46,14 @@ const route = async () => {
   let parsedURL = (request.resource ? '/' + request.resource : '/') 
         + (request.id ? '/:id' : '') 
         + (request.verb ? '/' + request.verb : '');
+
+  if(parsedURL === '/'){
+    header.style.display = "none";
+  }
+  if(parsedURL === '/home') {
+    // header.innerHTML = await Navbar.render();
+    header.style.display = "block";
+  }
 
   // console.log("PARSED", parsedURL);
   // Obtenga la página de nuestro hash de rutas compatibles.
